@@ -1,0 +1,37 @@
+@layer utilities {
+
+    .snap::-webkit-scrollbar {
+        background: #000;
+        width: 10px;
+    }
+
+    .snap::-webkit-scrollbar-thumb {
+        background: #fff;
+    }
+
+    .snap {
+      scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
+    }
+
+    .snap-y {
+      --scroll-snap-direction: y;
+    }
+
+    .snap-mandatory {
+      --scroll-snap-constraint: mandatory;
+    }
+
+    .snap-start {
+      scroll-snap-align: start;
+    }
+    
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none
+}
